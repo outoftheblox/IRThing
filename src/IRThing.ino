@@ -35,8 +35,8 @@ IRDecoder decoder(irrecv);
 BlinkPattern::Pattern<2> start{{1, 9}, 25};
 BlinkPattern::Pattern<0> disable{{}, 1000};
 
-String sensorTopic = "esp/" + thing.clientId() + "/ir/receive";
-String sendTopic = "esp/" + thing.clientId() + "/ir/send";
+String sensorTopic = "things/" + thing.clientId() + "/ir/receive";
+String sendTopic = "things/" + thing.clientId() + "/ir/send";
 
 int hexStringToInt(const char str[])
 {
